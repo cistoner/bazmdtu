@@ -5,15 +5,16 @@ if(!$connection){
 }
 mysql_select_db("registration",$connection);
 $username=$_POST['username'];
-$contact=$_POST['num'];
 $gender=$_POST['gender'];
+$birthday=$_POST['date'];
+$contact=$_POST['num'];
+$email=$_POST['email'];
 $nation=$_POST['nation'];
 $event=$_POST['event'];
-$email=$_POST['email'];
 $message=$_POST['message'];
 if(isset($_SERVER['HTTP_REFERER']))$ref = $_SERVER['HTTP_REFERER'];
 else $ref = "login_page.html";
-if($password != $confirm){header("location: reg_page.html");exit;}
+//if($password != $confirm){header("location: reg_page.html");exit;}
 $insert="INSERT INTO inputs(username,password,confirm
 ,birthday,contact,gender,email,nation,occupation)VALUES
 ('$username'
