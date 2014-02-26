@@ -329,7 +329,7 @@ h3.spec {
 
 #home-slider .slide-content {
 	font-size: 60px;
-	color: #FFFFFF;
+	color: #a7c5d3;
 	letter-spacing: -3px;
 	//text-transform: uppercase;	
 }
@@ -341,6 +341,13 @@ h3.spec {
 	height: 50px;
 	bottom: 0;
 	z-index: 2;
+}
+
+#home-slider .information-logo{
+	left:60%;
+	top:60%;
+	position: absolute;
+
 }
 
 #home-slider #nextslide,
@@ -964,9 +971,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 #contact-form .submit {
-     font-family: Consolas;width: 100px;background: #005353;color: white;
-				text-align: center;padding: 5px 10px 5px 10px;
-    /*background: #3C3F45;
+    background: #3C3F45;
     color: #23262C;
     cursor: pointer;
     display: inline-block;
@@ -982,7 +987,7 @@ nav#menu #menu-nav li a:hover {
 	-webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;	
 	   -moz-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s, color 0.1s linear 0s;
-		    transition: background 0.1s linear 0s, color 0.1s linear 0s;*/
+		    transition: background 0.1s linear 0s, color 0.1s linear 0s;
 }
 
 #contact-form .submit:hover {

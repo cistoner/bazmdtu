@@ -77,10 +77,11 @@ BRUSHED.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '_include/img/slider-images/bazm1.jpg', title : '<div class="slide-content">bAzm</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/bazm2.jpg', title : '<div class="slide-content">bAzm</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/bazm3.jpg', title : '<div class="slide-content">bAzm</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/DSC01981.jpg', title : '<div class="slide-content">bAzm</div>', thumb : '', url : ''}  
+											{image : '_include/img/slider-images/page1.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/page2.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/page3.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/page4.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},  
+											{image : '_include/img/slider-images/page5.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''}
 									],
 									
 		// Theme Options			   
