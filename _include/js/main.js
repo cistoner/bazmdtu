@@ -54,7 +54,7 @@ BRUSHED.slider = function(){
 		start_slide             :   1,			// Start slide (0 is random)
 		stop_loop				:	0,			// Pauses slideshow on last slide
 		random					: 	0,			// Randomize slide order (Ignores start slide)
-		slide_interval          :   4000,		// Length between transitions
+		slide_interval          :   12000,		// Length between transitions
 		transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 		transition_speed		:	300,		// Speed of transition
 		new_window				:	1,			// Image links open in new window/tab
@@ -80,13 +80,8 @@ BRUSHED.slider = function(){
 											{image : '_include/img/slider-images/page1.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/page2.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/page3.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
-<<<<<<< HEAD
 											{image : '_include/img/slider-images/page4.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},  
 											{image : '_include/img/slider-images/page5.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''}
-=======
-											{image : '_include/img/slider-images/page4.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/page5.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''}  
->>>>>>> code modified
 									],
 									
 		// Theme Options			   
