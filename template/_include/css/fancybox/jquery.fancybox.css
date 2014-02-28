@@ -242,6 +242,7 @@
 	position: relative;
 	text-shadow: none;
 	z-index: 8050;
+	display: none;
 }
 
 .fancybox-opened .fancybox-title {
@@ -291,10 +292,10 @@
 	color: #fff;
 }
 
-.fancybox-title-inside-wrap {
+/*.fancybox-title-inside-wrap {
 	padding: 25px 30px 30px;
 }
-
+*/
 .fancybox-title-over-wrap {
 	position: absolute;
 	bottom: 0;
