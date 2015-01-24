@@ -1,6 +1,6 @@
 <?php
 $count=0;
-$con=mysqli_connect("localhost","root","","basmdtu");
+
 if(mysqli_connect_errno())
 {
 	die("Error connecting to database");
