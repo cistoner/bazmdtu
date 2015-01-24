@@ -1,0 +1,14 @@
+header{
+	height:200px;
+}
+#left-box{
+	margin-left: 20px;
+	margin-top: 20px;
+	padding:5px;
+}
+#right-box{
+	border:1px solid black;
+	height:50px;
+	width:50px;
+	float: right;
+}
