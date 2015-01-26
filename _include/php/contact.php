@@ -2,13 +2,13 @@
 /*
 * Contact Form Class
 */
-
+include 'config.php';
 
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 
-$admin_email = 'your@yourdomain.com'; // Your Email
+$admin_email = 'izzatalimba@gmail.com'; // Your Email
 $message_min_length = 5; // Min Message Length
 
 
@@ -88,6 +88,23 @@ class Contact_Form{
 
 	function sendRequest(){
 		$this->validateFields();
+		$connection=mysql_connect(host, username, password);
+		if(!$connection){
+			echo '{"code":1,"error":"' .mysql_error() .'"}';exit;
+		}
+		mysql_select_db("test",$connection);
+
+		$username=$_POST['name'];
+		$email=$_POST['email'];
+		$message=$_POST['message'];
+		$insert="INSERT INTO contactus(`name`, `email`, `message`, `time`)VALUES('$username','$email','$message','" .time() ."')";
+		if(!mysql_query($insert))
+		{
+			echo '{"code":1,"error":"' .mysql_error() .'"}';exit;
+		}
+//		else echo '{"code":1}';
+		mysql_close($connection);
+
 		if($this->response_status)
 		{
 			$this->sendEmail();

@@ -1,6 +1,4 @@
 <?php
-$error1 = "Please enter your name";
-$error2 = "Please specify a valid email address";
 $person_name = "";
 $person_nameErr = "";
 $email = "";
@@ -32,15 +30,24 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 			if (($extension=='pdf'||$extension=='doc'||$extension=='docx')&&($type=='application/pdf'||$type=='application/doc'||$type=='application/docx')
 				&&$size<$max_size)
 			{
-				$location = __DIR__ .'/data';
-				$con = mysqli_connect("localhost","root", "", "");
+				$location = __DIR__ .'/data/';
+				$con = mysqli_connect("localhost","root", "99932", "test");
 				$name = md5(uniqid()).'_'.mysql_real_escape_string($name);
 				if (move_uploaded_file($tmp_name,$location.$name))
 				{
 					$file=$name;
 					$timestamp=time();
-					$timestamp=date('Y:m:d H:i:s',$timestamp);
-					include "insert.php";
+          $count=0;
+
+          if(mysqli_connect_errno())
+          {
+            die("Error connecting to database");
+          }
+          if(!mysqli_query($con,"INSERT INTO essays(id,name,email,file,time)
+            VALUES('' ,'".mysql_real_escape_string($person_name)."' , '".mysql_real_escape_string($email)."' , '".mysql_real_escape_string($file)."' , '".mysql_real_escape_string($timestamp)."')"))
+          die('Unable to update the database.Try again.');
+          $count=1;
+          mysqli_close($con);
 					if ($count==1)
 					{
 						$success=true;
@@ -219,7 +226,7 @@ function test_input($data) {
                 	<input type="file" name="file">
                 </p>
                 <p class="contact-submit">
-                	<input id="contact-submit" class="submit" type="submit" value="Send your message"/>
+                	<input id="contact-submit" class="submit" type="submit" value="Submit"/>
                 </p>
                 
                 <div id="response">
